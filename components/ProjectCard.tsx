@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Code, Target, Clock, Star, TrendingUp } from 'lucide-react'
+import ResourceRecommender from './ResourceRecommender'
 
 interface ProjectCardProps {
   project: {
@@ -156,6 +157,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </ul>
         </motion.div>
+
+        {/* Learning Resources */}
+        <ResourceRecommender techStack={project.techStack} />
       </div>
 
       {/* Footer */}
